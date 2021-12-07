@@ -1,0 +1,7 @@
+if u having issue related with tls v1.0 and 1.1 , then u need to disabled them.
+
+sudo vim /etc/apache2/site-available/your_domain.conf
+
+make sure u have this line
+
+SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
