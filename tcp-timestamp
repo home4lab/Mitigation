@@ -1,0 +1,22 @@
+source : https://www.whonix.org/wiki/Disable_TCP_and_ICMP_Timestamps
+
+1. Open a terminal (Konsole).
+
+Become root.
+
+sudo su
+2. Add the following line to /etc/sysctl.d/tcp_timestamps.conf
+
+net.ipv4.tcp_timestamps = 0
+To do that, use the following command.
+
+echo "net.ipv4.tcp_timestamps = 0" > /etc/sysctl.d/tcp_timestamps.conf
+3. To apply the sysctl settings without a reboot, run the following command.
+
+sysctl -p /etc/sysctl.d/tcp_timestamps.conf
+4. Check if the changes have been properly set.
+
+sysctl -a | grep net.ipv4.tcp_timestamps
+If it worked correctly, the system should provide the following output.
+
+net.ipv4.tcp_timestamps = 0
