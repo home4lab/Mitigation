@@ -1,5 +1,9 @@
-vim /etc/apache2/site-available/your_domain.conf
+enable module headers
 
-make sure u have this line
+sudo a2enmod headers
 
-SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
+sudo vim /etc/apache2/apache.conf
+
+add this line
+
+Header edit Set-Cookie ^(.*)$ $1;HttpOnly;Secure
