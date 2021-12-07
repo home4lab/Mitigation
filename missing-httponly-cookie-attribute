@@ -1,3 +1,5 @@
+source : https://stackoverflow.com/questions/24129201/add-secure-and-httponly-flags-to-every-set-cookie-response-in-apache-httpd
+
 enable module headers
 
 sudo a2enmod headers
