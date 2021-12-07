@@ -1,5 +1,7 @@
 if u having issue related with tls v1.0 and 1.1 , then u need to disabled them.
 
+source : https://www.ssl.com/guide/disable-tls-1-0-and-1-1-apache-nginx/
+
 sudo vim /etc/apache2/site-available/your_domain.conf
 
 make sure u have this line
