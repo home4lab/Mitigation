@@ -1,0 +1,5 @@
+vim /etc/apache2/site-available/your_domain.conf
+
+make sure u have this line
+
+SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
